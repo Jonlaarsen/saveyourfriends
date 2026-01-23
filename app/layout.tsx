@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Climate_Crisis, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavbarComponent from "@/components/header/NavbarComponent";
+import CartButton from "@/components/ui/CartButton";
+import { CartProvider } from "@/contexts/CartContext";
+import { Toaster } from "sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const climate = Climate_Crisis({
+  variable: "--font-climate",
   subsets: ["latin"],
 });
 
@@ -25,9 +29,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${geistMono.variable} ${climate.variable} antialiased`}
       >
-        {children}
+        <CartProvider>
+          <CartButton />
+          <NavbarComponent />
+          {children}
+          <Toaster
+            position="bottom-right"
+            richColors
+            toastOptions={{
+              style: {
+                background: "#000000",
+                color: "#a3e635",
+                border: "2px solid #a3e635",
+                borderRadius: "12px",
+              },
+              className: "font-mono",
+            }}
+          />{" "}
+        </CartProvider>
       </body>
     </html>
   );
