@@ -8,16 +8,16 @@ const page = () => {
   const { cartItems, getTotalPrice } = useCart();
 
   return (
-    <div className="flex items-center box-border justify-center w-full bg-black min-h-screen py-20  md:px-20 ">
+    <div className="flex items-center box-border justify-center w-full bg-black min-h-screen py-20 md:px-20 ">
       <div className="absolute inset-0 h-full w-full  bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
 
       <BackButton />
-      <div className=" h-full w-full py-20 min-h-[80vh]  md:p-20 flex flex-wrap items-center justify-center gap-5 md:rounded-4xl bg-linear-to-br from-black to-zinc-950 via-zinc-800 border-white border-y-2 md:border-4 ">
+      <div className="h-full w-full py-20 min-h-[80vh] md:p-20 flex flex-wrap items-center justify-center gap-5 md:rounded-4xl bg-linear-to-br from-black to-zinc-950 via-zinc-800 border-white border-y-2 md:border-4 ">
         {cartItems.length === 0 ? (
           <div className="text-white text-xl font-mono">Your cart is empty</div>
         ) : (
-          <div className="flex space-x-10">
-            <div className="flex md:min-w-3xl  flex-wrap px-2 items-center justify-center gap-5 w-full">
+          <div className="flex md:flex-row flex-col space-x-10">
+            <div className="flex md:min-w-3xl flex-wrap px-2 items-center justify-center gap-5 w-full">
               {cartItems.map((item) => (
                 <CartCard
                   key={item.id}

@@ -12,7 +12,7 @@ const NavbarComponent = () => {
       >
         <div className=" w-full bg-zinc-950 pb-5 max-w-lg rounded-2xl md:skew-x-12 border-b-4 border-white ">
           <div className="flex flex-col   justify-center md:-skew-x-12  items-center">
-            <h1 className=" font-uni text-secondary text-xl md:text-6xl font-semibold">
+            <h1 className=" font-uni text-secondary text-4xl md:text-6xl font-semibold">
               Save your friends
             </h1>
             <div className="flex justify-evenly w-full pt-5 font-mono">
