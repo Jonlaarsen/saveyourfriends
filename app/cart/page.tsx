@@ -16,8 +16,8 @@ const page = () => {
         {cartItems.length === 0 ? (
           <div className="text-white text-xl font-mono">Your cart is empty</div>
         ) : (
-          <>
-            <div className="flex flex-wrap px-2 items-center justify-center gap-5 w-full">
+          <div className="flex space-x-10">
+            <div className="flex md:min-w-3xl  flex-wrap px-2 items-center justify-center gap-5 w-full">
               {cartItems.map((item) => (
                 <CartCard
                   key={item.id}
@@ -29,10 +29,18 @@ const page = () => {
                 />
               ))}
             </div>
-            <div className="mt-8 text-white font-mono text-xl border-t-2 border-white pt-4 w-full text-center">
-              Total: ${getTotalPrice().toFixed(2)}
+            <div className="flex flex-col items-center justify-center h-full z-20 text-white font-mono text-xl mt-8 pt-4 w-full text-center">
+              <div className="flex flex-col justify-center items-center space-y-4 border-b-2 border-white pb-4 mb-4">
+                <button className="mt-2 bg-secondary text-black font-bold py-1 px-4 rounded-full hover:bg-lime-400 transition duration-200 ">
+                  Shop More
+                </button>
+                <button className="mt-2 border-secondary border-2 text-white font-bold py-1 px-4 rounded-full hover:bg-lime-400 transition duration-200">
+                  Checkout
+                </button>
+              </div>
+              <p>Total: ${getTotalPrice().toFixed(2)}</p>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

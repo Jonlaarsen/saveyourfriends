@@ -7,7 +7,7 @@ const BackButton = () => {
         className="md:text-xl text-sm font-bold flex items-center gap-2 text-white/70 hover:text-white duration-200 justify-center"
         href="/"
       >
-        <ArrowBigLeftDash className="md:h-8 h-4 md:w-8 w-4" /> BACK
+        <ArrowBigLeftDash className="md:h-8 h-4 md:w-8 w-4" /> HOME
       </a>
     </div>
   );
