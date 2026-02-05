@@ -18,7 +18,7 @@ const HeroComponent = () => {
           </h1>
         </div>
         <div className=" flex flex-col items-center justify-center  pb-20 md:pb-60 pr-5 md:pr-20 text-right min-h-[95vh] w-1/2 h-full  ">
-          <h1 className="text-4xl md:text-7xl font-bold text-foreground">
+          <h1 className="text-3xl md:text-7xl font-bold text-foreground">
             MARLEY LIKES HORSES
           </h1>
           <p className="text-xs md:text-base text-foreground">
